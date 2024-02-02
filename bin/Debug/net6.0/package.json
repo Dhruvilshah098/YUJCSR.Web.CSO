@@ -1,0 +1,27 @@
+{
+  "name": "yujcsr.web.cso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "bootstrap": "~5.2.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.6.2",
+    "sass": "^1.58.3",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "sass-loader": "13.2.0",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "author": "YUJCSR",
+  "license": "ISC"
+}

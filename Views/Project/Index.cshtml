@@ -1,0 +1,67 @@
+﻿@model List<YUJCSR.Web.Project.Models.ProjectModel>
+
+@{
+	Layout = "_CRM-Layout";
+}
+
+<div class="container-fluid">
+	<section>
+		@* 	<div class="text-right">
+		<a href="/project/Create" class="btn btn-primary btn-sm">Create Project</a>
+		</div> *@
+
+		<div class="list-data mt-3">
+			<!-- DataTales Example -->
+			<div class="card shadow mb-4">
+				<div class="card-header d-flex justify-content-between align-items-center">
+					<span class="d-flex">
+						<i class="fas fa-project-diagram mr-2"></i>
+						<h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+					</span>
+					<span class="float-right">
+						<a href="/project/Create" class="btn btn-primary btn-sm">Create</a>
+					</span>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Title</th>
+									<th>Are Of Interest</th>
+									<th>Development Goal</th>
+									<th>Location</th>
+									<th>Total Budget</th>
+									<th>Duration In Months</th>
+									<th> Actions </th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var data in Model)
+								{
+									<tr>
+										<td> @data.title </td>
+										<td> @data.areOfInterest </td>
+										<td> @data.developmentGoal </td>
+										<td> @data.location </td>
+										<td> @data.totalBudget </td>
+										<td> @data.durationInMonths </td>
+										<td>
+											<a href=@Url.Action("Edit","Project", new {projectid= data.projectID})><i class="fas fa-edit"></i></a> |
+											&nbsp;
+											<a href=@Url.Action("Milestones","Project", new {projectid= data.projectID})>Milestones</a>
+											|
+											&nbsp;
+											<a href=@Url.Action("Budget","Project", new {projectid= data.projectID})>Budgets</a>
+										</td>
+									</tr>
+								}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

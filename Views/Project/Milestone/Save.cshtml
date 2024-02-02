@@ -1,0 +1,45 @@
+﻿@model YUJCSR.Web.Project.Models.ResultMilestone
+
+
+@{
+    Layout = "_CRM-Layout";
+}
+
+<div class="container-fluid">
+	<section>
+
+		@if (string.IsNullOrEmpty(Model.result.milestoneID))
+		{
+			<h1>Create Milestone</h1>
+		}
+		else
+		{
+			<h1>Edit Milestone</h1>
+		}
+		<div class="card mb-4">
+			<div>
+				<div class="card-body">
+					@using (Html.BeginForm("SaveMilestone", "Project", FormMethod.Post))
+					{
+						@Html.HiddenFor(m => m.result.projectID)
+						@Html.HiddenFor(m => m.result.milestoneID)
+
+						<div class="mb-3">
+							<label class="small mb-1" for="milestoneName">Milestone Name</label>
+							@Html.TextBoxFor(m => m.result.milestoneName, new { @class = "form-control" })
+						</div>
+						<div class="row gx-3 mb-3">
+							<div class="col-md-6">
+								<label class="small mb-1" for="description">Description</label>
+								@Html.TextBoxFor(m => m.result.description, new { @class = "form-control" })
+							</div>
+						</div>
+						<div class="text-right">
+							<button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

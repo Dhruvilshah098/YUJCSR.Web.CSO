@@ -1,0 +1,58 @@
+﻿@model YUJCSR.Web.CSO.Models.LoginModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_UserLayout";
+}
+
+	<section class="wizard-section">
+		<div class="row no-gutters">
+			<div class="col-lg-6 col-md-6">
+				<div class="wizard-content-left d-flex justify-content-center align-items-center">
+					<h1>Login</h1>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="form-wizard h-100 d-flex align-items-center">
+					<form action="" method="post" role="form" class="w-100">
+		
+						 @* <fieldset class="wizard-fieldset"> *@
+							<h5 class="text-center">Login in to continue</h5>
+							<div class="form-group">
+								<input asp-for ="UserName" type="email" class="form-control wizard-required" id="email">
+								<label for="email" class="wizard-form-text-label">Email*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							@* <div class="form-group">
+								<input type="text" class="form-control wizard-required" id="username">
+								<label for="username" class="wizard-form-text-label">User Name*</label>
+								<div class="wizard-form-error"></div>
+							</div> *@
+							<div class="form-group">
+								<input asp-for ="Password" type="password" class="form-control wizard-required" id="pwd">
+								<label for="pwd" class="wizard-form-text-label">Password*</label>
+								<div class="wizard-form-error"></div>
+								<span class="wizard-password-eye"><i class="far fa-eye"></i></span>
+							</div>
+							@* <div class="form-group">
+								<input type="password" class="form-control wizard-required" id="cpwd">
+								<label for="cpwd" class="wizard-form-text-label">Confirm Password*</label>
+								<div class="wizard-form-error"></div>
+							</div> *@
+							<div class="form-group clearfix  text-center">
+							
+								 <input type="submit" value="Login" class="form-wizard-next-btn" />
+							</div>
+
+							
+                    @if (!string.IsNullOrEmpty(ViewBag.message))
+                    {
+                        <p>@ViewBag.message</p>
+                    }
+						@* </fieldset> *@
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+

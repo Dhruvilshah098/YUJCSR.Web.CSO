@@ -1,0 +1,62 @@
+﻿.img-account-profile {
+    max-width: 10rem;
+}
+
+.table-bordered {
+    thead {
+        th, td {
+            border-width: 0px 1px 0px 0px;
+        }
+    }
+}
+
+.dataTables_length, .dataTables_filter {
+    height: 42px;
+    display: flex;
+    align-items: center;
+
+    label {
+        margin-bottom: 0px;
+    }
+}
+
+.dataTables_filter {
+    justify-content: flex-end;
+}
+
+div.dataTables_wrapper {
+    .row:has(.dataTables_info) {
+        align-items: center;
+        padding-top: 0.25rem;
+    }
+
+    div.dataTables_info {
+        padding-top: 0px;
+    }
+}
+
+.page-header {
+    margin-top: -24px;
+
+    &.page-header-compact {
+        .page-header-content {
+            .page-header-title {
+                line-height: normal;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+                font-size: 1rem;
+                color: #212832;
+
+                .page-header-icon {
+                    color: rgba(33, 40, 50, 0.5);
+                    margin-right: 0.5rem;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+﻿@model YUJCSR.Web.Project.Models.ResultListMilestone
+
+@{
+	Layout = "_CRM-Layout";
+}
+
+<div class="container-fluid">
+	<section>
+		<div class="text-right">
+			<a href=@Url.Action("CreateMilestone","Project" , new { ProjectId = Model.projectId}) class="btn btn-primary">Create Milestone</a>
+		</div>
+
+		<div class="list-data mt-3">
+			<!-- DataTales Example -->
+			<div class="card shadow mb-4">
+
+				<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary">Milestones</h6>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Milestone Name</th>
+									<th>Milestone Description</th>
+									<th>Actions </th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var data in Model.result)
+								{
+									<tr>
+										<td> @data.milestoneName </td>
+										<td> @data.description </td>
+										<td> <a href=@Url.Action("EditMilestone","Project" , new { MilestoneId = data.milestoneID })><i class="fas fa-edit"></i></a></td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Register - YUJCSR.Web.CSO</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/User/Register.css" />
+</head>
+<body>
+	<section class="wizard-section">
+		<div class="row no-gutters">
+			<div class="col-lg-6 col-md-6">
+				<div class="wizard-content-left d-flex justify-content-center align-items-center">
+					<h1>On-Boarding</h1>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="form-wizard">
+					<form action="" method="post" role="form">
+						<div class="form-wizard-header">
+							<p>Fill all form field to go next step</p>
+							<ul class="list-unstyled form-wizard-steps clearfix">
+								<li class="active"><span>1</span></li>
+								<li><span>2</span></li>
+								<li><span>3</span></li>
+								<li><span>4</span></li>
+								@* <li><span>5</span></li> *@
+								@* <li><span>6</span></li> *@
+							</ul>
+						</div>
+						<fieldset class="wizard-fieldset show">
+							<h5>Organization Information</h5>
+							<div class="form-group">
+								<input type="text" class="form-control wizard-required" id="OrgName">
+								<label for="OrgName" class="wizard-form-text-label">Organization Name*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								Organization Type
+								<div class="wizard-form-radio">
+									<input name="NGO " id="NGO" type="radio">
+									<label for="NGO">NGO</label>
+								</div>
+								<div class="wizard-form-radio">
+									<input name="Trust" id="Trust" type="radio">
+									<label for="Trust">Trust</label>
+								</div>
+								<div class="wizard-form-radio">
+									<input name="Society" id="Society" type="radio">
+									<label for="Society">Society</label>
+								</div>
+								<div class="wizard-form-radio">
+									<input name="Individual" id="Individual" type="radio">
+									<label for="Individual">Individual</label>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control" id="Website">
+								<label for="Website" class="wizard-form-text-label">Website (if applicable)</label>
+								@* <div class="wizard-form-error"></div> *@
+							</div>
+							
+							<div class="form-group">
+								<input type="text" class="form-control wizard-required" id="FounderName">
+								<label for="FounderName" class="wizard-form-text-label">
+									Name(s) of Founder(s) or Key Personnel*
+								</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>
+						<fieldset class="wizard-fieldset">
+							<h5>Personal Information</h5>
+							<div class="form-group">
+								<input type="email" class="form-control wizard-required" id="contactName">
+								<label for="email" class="wizard-form-text-label">Name of the Contact Person*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group">
+								<input type="number" class="form-control wizard-required" id="phoneNumber">
+								<label for="phoneNumber" class="wizard-form-text-label">Phone number*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control wizard-required" id="officialemail">
+								<label for="officialemail" class="wizard-form-text-label">Official Email ID (Please enter all applicable email IDs)*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>
+						<fieldset class="wizard-fieldset">
+							<h5>Organization Goals</h5>
+							<div class="form-group">
+								<input type="text" class="form-control" id="Aim">
+								<label for="Aim" class="wizard-form-text-label">Aim</label>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="Vision">
+								<label for="Vision" class="wizard-form-text-label">Vision</label>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="Mission">
+								<label for="Mission" class="wizard-form-text-label">Mission</label>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="Objectives">
+								<label for="Objectives" class="wizard-form-text-label">Objectives</label>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control wizard-required" id="coreimpact">
+								<label for="coreimpact" class="wizard-form-text-label">Core Impact Areas / Field of Work:*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control wizard-required" id="fundraise">
+								<label for="fundraise" class="wizard-form-text-label">Funds Raised in Last Financial Year (2022-23)*</label>
+								<div class="wizard-form-error"></div>
+							</div>
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset>
+
+						@* <fieldset class="wizard-fieldset">
+							<div class="form-group">
+								<label for="Aim">United Nations Sustainable Development Goals addressed (please tick on the CSR goals that your projects cater to):</label>
+								
+								<div class="row">
+									<div class="col-6">
+										<input type="checkbox" class="form-control" id="Vision">
+									</div>
+									<div class="col-6">
+										<label for="Vision" class="wizard-form-text-label">Vision</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="Vision">
+								<label for="Vision" class="wizard-form-text-label">Vision</label>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="Mission">
+								<label for="Mission" class="wizard-form-text-label">Mission</label>
+							</div>
+							
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+							</div>
+						</fieldset> *@
+
+						<fieldset class="wizard-fieldset">
+							<h5>Upload Documents</h5>
+					
+							<div class="form-group">
+								<label for="honame">Please upload the Permanent Account Number (PAN) Card . (PDF or Image format)</label>
+								<input type="file" class="form-control wizard-required" id="honame">
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Project Photos (Upto 3 Photographs, PDF or Image format)*
+								</label>
+								<h6>Please upload upto 3 photographs of the projects that your organization has completed so far.</h6>
+								<input type="file" class="form-control wizard-required" id="honame">
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="honame">Descriptions of photographs uploaded in previous question. Please give a separate description for each photograph along with the location (city & state) where the project was executed:</label>
+								<input type="text" class="form-control wizard-required" id="honame">
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Please upload the NGO Registration document. (PDF or Image format)*</label>
+								<input type="file" class="form-control wizard-required" id="honame">
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Please upload the CSR 1 form. (PDF or Image format)*
+								</label>
+								<input type="file" class="form-control wizard-required" id="honame">
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Please upload the past three years project report. (in PDF format)
+								</label>
+								<input type="file" class="form-control" id="honame">
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Please upload the following certifications (if applicable): 10AC / 80G / 12AA / 12A (PDF or Image format)*
+								</label>
+								<input type="file" class="form-control wizard-required" id="honame">
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Please upload the audited financial statements for the past three (3) years. Please consult your chartered accountant and ensure these documents have a UDIN number. (PDF format)*
+								</label>
+								<input type="file" class="form-control wizard-required" id="honame">
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Please upload a credit rating certificate if available. (PDF or document or image format)*
+								</label>
+								<input type="file" class="form-control wizard-required" id="honame">
+								<div class="wizard-form-error"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="honame">
+									Please upload any recommendation or appreciation letter issued by any government authority if available. (PDF or document or image format)
+								</label>
+								<input type="file" class="form-control" id="honame">
+							</div>
+
+
+							<div class="form-group">
+								<label for="honame">
+									Is there any other information that you would like to share with YujCSR to support your onboarding application?
+								</label>
+								<input type="text" class="form-control" id="honame">
+								<div class="wizard-form-error"></div>
+							</div>
+							
+							<div class="form-group clearfix">
+								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+								<a href="javascript:;" class="form-wizard-submit float-right">Submit</a>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="~/js/User/Register.js"></script>
+</body>
+</html>

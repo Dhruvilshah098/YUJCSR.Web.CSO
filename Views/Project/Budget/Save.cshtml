@@ -1,0 +1,51 @@
+﻿@model YUJCSR.Web.Project.Models.BudgetModel
+
+
+@{
+	Layout = "_CRM-Layout";
+}
+
+<div class="container-fluid">
+	<section>
+		@if (string.IsNullOrEmpty(Model.budgetID))
+		{
+			<h1>Create Budget</h1>
+		}
+		else
+		{
+			<h1>Edit Budget</h1>
+		}
+
+		<div class="card mb-4">
+			<div>
+				<div class="card-body">
+					@using (Html.BeginForm("SaveBudget", "Project", FormMethod.Post))
+					{
+						@Html.HiddenFor(m => m.projectID)
+						@Html.HiddenFor(m => m.budgetID)
+
+						<div class="mb-3">
+							<label class="small mb-1" for="Milestone">Milestone</label>
+							@Html.TextBoxFor(m => m.milestone, new { @class = "form-control" })
+
+						</div>
+						<div class="row gx-3 mb-3">
+							<div class="col-md-6">
+								<label class="small mb-1" for="Description">Description</label>
+								@Html.TextBoxFor(m => m.description, new { @class = "form-control" })
+							</div>
+							<div class="col-md-6">
+								<label class="small mb-1" for="Amount">Amount</label>
+								@Html.TextBoxFor(m => m.amount, new { @class = "form-control" })
+							</div>
+						</div>
+						<div class="text-right">
+							<button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
