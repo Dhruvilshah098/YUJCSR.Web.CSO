@@ -24,9 +24,12 @@ namespace YUJCSR.Web.CSO.Controllers
         public IActionResult Login(LoginModel model)
         {
             CSOManager manager = new CSOManager(_config);
-            var status = manager.LoginCheck(model);
-            if (status)
+            var data = manager.LoginCheck(model);
+            if (data != null && data.result != null)
             {
+                HttpContext.Session.SetString("_UserName", model.UserName);
+                HttpContext.Session.SetString("_CcoId", data.result.csoid);
+
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -62,9 +65,24 @@ namespace YUJCSR.Web.CSO.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Profile(CSOProfileModel model)
+        {
+            CSOManager manager = new CSOManager(_config);
+            var profileData = manager.SaveProfileDetails(model);
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Profile()
         {
-            return View();
+            CSOProfileModel objCSO = new CSOProfileModel();
+
+            string ccoId = HttpContext.Session.GetString("_CcoId");
+
+            CSOManager manager = new CSOManager(_config);
+            var profileData = manager.GetProfileDetails(ccoId);
+            return View(profileData);
         }
     }
 }

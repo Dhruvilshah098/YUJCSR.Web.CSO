@@ -1,5 +1,10 @@
 ﻿namespace YUJCSR.Web.CSO.Models
 {
+    public class CSOProfileModelResult
+    {
+        public CSOProfileModel Result { get; set; }
+    }
+
     public class CSOProfileModel
     {
         public string? CSOID { get; set; }

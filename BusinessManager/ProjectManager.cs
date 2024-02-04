@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using YUJCSR.Web.CSO.Helper;
 using YUJCSR.Web.Project.Models;
 
 namespace YUJCSR.Web.CSO.BusinessManager
@@ -20,7 +21,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 
 			try
 			{
-				string dataResponse = GetApiData("Project");
+				string dataResponse = CommonAPIHelper.GetApiData(_baseurl, "Project");
 
 				if (!string.IsNullOrEmpty(dataResponse))
 				{
@@ -42,7 +43,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 
 			try
 			{
-				string dataResponse = GetApiData("Project/" + projectId + "/milestones");
+				string dataResponse = CommonAPIHelper.GetApiData(_baseurl, "Project/" + projectId + "/milestones");
 
 				if (!string.IsNullOrEmpty(dataResponse))
 				{
@@ -64,7 +65,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 
 			try
 			{
-				string dataResponse = GetApiData("Project/" + projectId + "/budgets");
+				string dataResponse = CommonAPIHelper.GetApiData(_baseurl, "Project/" + projectId + "/budgets");
 
 				if (!string.IsNullOrEmpty(dataResponse))
 				{
@@ -212,7 +213,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 
 			try
 			{
-				string dataResponse = GetApiData("Project/" + projectId);
+				string dataResponse = CommonAPIHelper.GetApiData(_baseurl, "Project/" + projectId);
 
 				if (!string.IsNullOrEmpty(dataResponse))
 				{
@@ -237,7 +238,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 
 			try
 			{
-				string dataResponse = GetApiData("Project/milestone/" + milestone);
+				string dataResponse = CommonAPIHelper.GetApiData(_baseurl, "Project/milestone/" + milestone);
 
 				if (!string.IsNullOrEmpty(dataResponse))
 				{
@@ -263,7 +264,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 
 			try
 			{
-				string dataResponse = GetApiData("Project/Budgets/" + budgetId);
+				string dataResponse = CommonAPIHelper.GetApiData(_baseurl, "Project/Budgets/" + budgetId);
 
 				if (!string.IsNullOrEmpty(dataResponse))
 				{
@@ -280,26 +281,6 @@ namespace YUJCSR.Web.CSO.BusinessManager
 			{
 				throw;
 			}
-		}
-
-		private string GetApiData(string methodName)
-		{
-			using (var client = new HttpClient())
-			{
-
-				client.BaseAddress = new Uri(_baseurl);
-				client.DefaultRequestHeaders.Clear();
-				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-				var getData = client.GetAsync(methodName);
-				getData.Wait();
-				var Res = getData.Result;
-				if (Res.IsSuccessStatusCode)
-				{
-					return Res.Content.ReadAsStringAsync().Result;
-				}
-			}
-
-			return null;
 		}
 	}
 }
