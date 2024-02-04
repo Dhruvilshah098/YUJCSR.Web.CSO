@@ -12,8 +12,8 @@ namespace YUJCSR.Web.CSO.BusinessManager
 		public ProjectManager(IConfiguration iConfig)
 		{
 			_configuration = iConfig;
-			_baseurl = _configuration.GetValue<string>("BaseUrl");
-		}
+			_baseurl =  _configuration.GetValue<string>("BaseUrl") + "/api/";
+        }
 
 		public List<ProjectModel> GetProjects()
 		{

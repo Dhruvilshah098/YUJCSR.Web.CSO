@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\YUJCSR.Web.CSO.props" />
-</Project>
