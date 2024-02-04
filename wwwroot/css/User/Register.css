@@ -11,7 +11,7 @@
 .wizard-content-left {
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.45);
-    background-image: url("https://i.ibb.co/X292hJF/form-wizard-bg-2.jpg");
+    background-image: url("/img/user/login.svg");
     background-position: center center;
     background-size: cover;
     height: 100vh;
