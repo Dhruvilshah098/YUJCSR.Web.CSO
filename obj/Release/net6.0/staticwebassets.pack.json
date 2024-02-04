@@ -49,6 +49,26 @@
       "PackagePath": "staticwebassets\\img\\undraw_rocket.svg"
     },
     {
+      "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\img\\user\\login.svg",
+      "PackagePath": "staticwebassets\\img\\user\\login.svg"
+    },
+    {
+      "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\js\\Chart.bundle.js",
+      "PackagePath": "staticwebassets\\js\\Chart.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\js\\Chart.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\Chart.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\js\\Chart.js",
+      "PackagePath": "staticwebassets\\js\\Chart.js"
+    },
+    {
+      "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\js\\Chart.min.js"
+    },
+    {
       "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\js\\User\\Register.js",
       "PackagePath": "staticwebassets\\js\\User\\Register.js"
     },
