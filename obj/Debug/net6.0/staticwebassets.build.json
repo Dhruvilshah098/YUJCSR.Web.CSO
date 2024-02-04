@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FspHNwPvba3ya70x1x3vda3ZxQwp2jWoGVi5fqFuEdc=",
+  "Hash": "x7Oa261UmfUJA2DjhEQDbFr2fl2AOK3tsm6Zs6rvvCY=",
   "Source": "YUJCSR.Web.CSO",
   "BasePath": "_content/YUJCSR.Web.CSO",
   "Mode": "Default",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\undraw_rocket.svg"
+    },
+    {
+      "Identity": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\img\\user\\login.svg",
+      "SourceId": "YUJCSR.Web.CSO",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\",
+      "BasePath": "_content/YUJCSR.Web.CSO",
+      "RelativePath": "img/user/login.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\user\\login.svg"
     },
     {
       "Identity": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\js\\_temp.js",

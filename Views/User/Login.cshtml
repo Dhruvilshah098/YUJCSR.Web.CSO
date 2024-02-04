@@ -4,54 +4,40 @@
     Layout = "_UserLayout";
 }
 
-	<section class="wizard-section">
-		<div class="row no-gutters">
+	<section class="login-section">
+		<div class="row no-gutters">			
 			<div class="col-lg-6 col-md-6">
-				<div class="wizard-content-left d-flex justify-content-center align-items-center">
-					<h1>Login</h1>
-				</div>
-			</div>
-			<div class="col-lg-6 col-md-6">
-				<div class="form-wizard h-100 d-flex align-items-center">
-					<form action="" method="post" role="form" class="w-100">
-		
-						 @* <fieldset class="wizard-fieldset"> *@
-							<h5 class="text-center">Login in to continue</h5>
+				<div class="h-100 d-flex align-items-center justify-content-center">
+					<div class="p-3 shadow-lg py-5 w-75" style="border-radius: 12px">
+						<form action="" method="post" role="form" class="w-75 m-auto">
+							<h1 class="text-primary">Login</h1>
+							<h5 class="small mb-4"> Dont have an account yet? <a class="text-primary" href="/User/Register">Sign Up</a></h5>
 							<div class="form-group">
-								<input asp-for ="UserName" type="email" class="form-control wizard-required" id="email">
-								<label for="email" class="wizard-form-text-label">Email*</label>
-								<div class="wizard-form-error"></div>
+								<label for="email" class="">Email*</label>
+								<input asp-for="UserName" type="email" class="form-control" id="email" required>
 							</div>
-							@* <div class="form-group">
-								<input type="text" class="form-control wizard-required" id="username">
-								<label for="username" class="wizard-form-text-label">User Name*</label>
-								<div class="wizard-form-error"></div>
-							</div> *@
+							<div class="form-group mb-4">
+								<label for="pwd" class="">Password*</label>
+								<input asp-for="Password" type="password" class="form-control" id="pwd" required>
+							</div>
 							<div class="form-group">
-								<input asp-for ="Password" type="password" class="form-control wizard-required" id="pwd">
-								<label for="pwd" class="wizard-form-text-label">Password*</label>
-								<div class="wizard-form-error"></div>
-								<span class="wizard-password-eye"><i class="far fa-eye"></i></span>
-							</div>
-							@* <div class="form-group">
-								<input type="password" class="form-control wizard-required" id="cpwd">
-								<label for="cpwd" class="wizard-form-text-label">Confirm Password*</label>
-								<div class="wizard-form-error"></div>
-							</div> *@
-							<div class="form-group clearfix  text-center">
-							
-								 <input type="submit" value="Login" class="form-wizard-next-btn" />
+								<input type="submit" value="Login" class="btn btn-primary btn-block" />
 							</div>
 
-							
-                    @if (!string.IsNullOrEmpty(ViewBag.message))
-                    {
-                        <p>@ViewBag.message</p>
-                    }
-						@* </fieldset> *@
-					</form>
+							@if (!string.IsNullOrEmpty(ViewBag.message))
+							{
+								<p>@ViewBag.message</p>
+							}
+						</form>
+					</div>
 				</div>
 			</div>
+
+		<div class="col-lg-6 col-md-6">
+			<div class="d-flex align-items-center">
+				<img src="/img/user/login.svg" style="max-height: 100vh" />
+			</div>
+		</div>
 		</div>
 	</section>
 

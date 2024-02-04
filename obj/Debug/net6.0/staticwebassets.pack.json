@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\img\\undraw_rocket.svg"
     },
     {
+      "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\img\\user\\login.svg",
+      "PackagePath": "staticwebassets\\img\\user\\login.svg"
+    },
+    {
       "Id": "C:\\Users\\shahn\\OneDrive\\Documents\\GitHub\\YUJCSR.Web.CSO\\wwwroot\\js\\User\\Register.js",
       "PackagePath": "staticwebassets\\js\\User\\Register.js"
     },
