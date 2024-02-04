@@ -9,15 +9,15 @@
     public class ProjectModel
 	{
         public string? CSOID { get; set; }
-        public string? projectID { get; set; }
+        public string? ProjectID { get; set; }
         public string? refID { get; set; }
-        public string? title { get; set; }
+        public string? Title { get; set; }
         public string? areOfInterest { get; set; }
         public string? developmentGoal { get; set; }
         public string? projectDescription { get; set; }
-        public string? location { get; set; }
-        public decimal? totalBudget { get; set; }
-        public decimal? durationInMonths { get; set; }
+        public string? Location { get; set; }
+        public decimal? TotalBudget { get; set; }
+        public decimal? DurationInMonths { get; set; }
         public decimal? expectedOutcome { get; set; }
         public string? amenities { get; set; }
         public string? experts { get; set; }

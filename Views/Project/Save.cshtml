@@ -7,7 +7,7 @@
 
 <div class="container-fluid">
 	<section>
-		@if (string.IsNullOrEmpty(Model.projectID))
+		@if (string.IsNullOrEmpty(Model.ProjectID))
 		{
 			<h1>Create Project</h1>
 		}
@@ -22,7 +22,7 @@
 				<div class="card-body">
 					@using (Html.BeginForm("SaveProject", "Project", FormMethod.Post))
 					{
-						@Html.HiddenFor(m => m.projectID)
+						@Html.HiddenFor(m => m.ProjectID)
 						@Html.HiddenFor(m => m.createdDate)
 						@Html.HiddenFor(m => m.createdBy)
 						@Html.HiddenFor(m => m.modifiedBy)
@@ -33,7 +33,7 @@
 
 						<div class="mb-3">
 							<label class="small mb-1" for="title">Title</label>
-							@Html.TextBoxFor(m => m.title, new { @class = "form-control" })
+							@Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
 
 						</div>
 						<div class="row gx-3 mb-3">
@@ -49,17 +49,17 @@
 						<div class="row gx-3 mb-3">
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputOrgName">Total Budget</label>
-								@Html.TextBoxFor(m => m.totalBudget, new { @class = "form-control" })
+								@Html.TextBoxFor(m => m.TotalBudget, new { @class = "form-control" })
 							</div>
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputLocation">Location</label>
-								@Html.TextBoxFor(m => m.location, new { @class = "form-control" })
+								@Html.TextBoxFor(m => m.Location, new { @class = "form-control" })
 							</div>
 						</div>
 						<div class="row gx-3 mb-3">
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputOrgName">Duration in Months</label>
-								@Html.TextBoxFor(m => m.durationInMonths, new { @class = "form-control" })
+								@Html.TextBoxFor(m => m.DurationInMonths, new { @class = "form-control" })
 							</div>
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputLocation">Development Code</label>

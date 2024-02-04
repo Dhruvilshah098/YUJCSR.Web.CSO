@@ -40,19 +40,19 @@
 								@foreach (var data in Model)
 								{
 									<tr>
-										<td> @data.title </td>
+										<td> @data.Title </td>
 										<td> @data.areOfInterest </td>
 										<td> @data.developmentGoal </td>
-										<td> @data.location </td>
-										<td> @data.totalBudget </td>
-										<td> @data.durationInMonths </td>
+										<td> @data.Location </td>
+										<td> @data.TotalBudget </td>
+										<td> @data.DurationInMonths </td>
 										<td>
-											<a href=@Url.Action("Edit","Project", new {projectid= data.projectID})><i class="fas fa-edit"></i></a> |
+											<a href=@Url.Action("Edit","Project", new {projectid= data.ProjectID})><i class="fas fa-edit"></i></a> |
 											&nbsp;
-											<a href=@Url.Action("Milestones","Project", new {projectid= data.projectID})>Milestones</a>
+											<a href=@Url.Action("Milestones","Project", new {projectid= data.ProjectID})>Milestones</a>
 											|
 											&nbsp;
-											<a href=@Url.Action("Budget","Project", new {projectid= data.projectID})>Budgets</a>
+											<a href=@Url.Action("Budget","Project", new {projectid= data.ProjectID})>Budgets</a>
 										</td>
 									</tr>
 								}
