@@ -179,7 +179,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 					client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 					string apiMethod = string.Empty;
-					if (string.IsNullOrEmpty(dataInputRequest.projectID))
+					if (string.IsNullOrEmpty(dataInputRequest.ProjectID))
 					{
 						apiMethod = "Project";
 						dataInputRequest.createdBy = "cso portal";
@@ -189,7 +189,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
 					else
 					{
 						dataInputRequest.activeStatus = true;
-						apiMethod = "Project/" + dataInputRequest.projectID;
+						apiMethod = "Project/" + dataInputRequest.ProjectID;
 					}
 					var postTask = client.PostAsJsonAsync<ProjectModel>(apiMethod, dataInputRequest);
 					postTask.Wait();

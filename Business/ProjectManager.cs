@@ -37,7 +37,7 @@ namespace YUJCSR.Web.Portal.Business
 
                 list.Add(new ProjectModel()
                 {
-                    projectID= "1",
+                    ProjectID= "1",
                     Title = "Education",
                     DurationInMonths = 48,
                     TotalBudget = 4500000,
