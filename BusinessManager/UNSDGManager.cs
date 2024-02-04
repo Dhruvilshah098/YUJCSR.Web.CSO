@@ -14,7 +14,7 @@ namespace YUJCSR.Web.CSO.BusinessManager
         public UNSDGManager(IConfiguration iConfig)
         {
             _configuration = iConfig;
-            _baseurl = _configuration.GetValue<string>("BaseUrl");
+            _baseurl = _configuration.GetValue<string>("BaseUrl") + "/api/";
         }
 
 
