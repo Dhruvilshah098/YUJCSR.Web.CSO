@@ -2070,3 +2070,4 @@ C:\Users\shahn\OneDrive\Documents\GitHub\YUJCSR.Web.CSO\obj\Debug\net6.0\refint\
 C:\Users\shahn\OneDrive\Documents\GitHub\YUJCSR.Web.CSO\obj\Debug\net6.0\YUJCSR.Web.CSO.pdb
 C:\Users\shahn\OneDrive\Documents\GitHub\YUJCSR.Web.CSO\obj\Debug\net6.0\YUJCSR.Web.CSO.genruntimeconfig.cache
 C:\Users\shahn\OneDrive\Documents\GitHub\YUJCSR.Web.CSO\obj\Debug\net6.0\ref\YUJCSR.Web.CSO.dll
+C:\Users\shahn\OneDrive\Documents\GitHub\YUJCSR.Web.CSO\obj\Debug\net6.0\YUJCSR.Web.CSO.sourcelink.json
