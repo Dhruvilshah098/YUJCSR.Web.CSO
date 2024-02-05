@@ -50,7 +50,7 @@
 						<div class="row gx-3 mb-3">
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputOrgName">Total Budget</label>
-								@Html.TextBoxFor(m => m.TotalBudget, new { @class = "form-control" })
+								@Html.TextBoxFor(m => m.TotalBudget, new { @type = "number", @class = "form-control" })
 							</div>
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputLocation">Location</label>
@@ -60,7 +60,7 @@
 						<div class="row gx-3 mb-3">
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputOrgName">Duration in Months</label>
-								@Html.TextBoxFor(m => m.DurationInMonths, new { @class = "form-control" })
+								@Html.TextBoxFor(m => m.DurationInMonths, new { @type="number", @class = "form-control" })
 							</div>
 							<div class="col-md-6">
 								<label class="small mb-1" for="inputLocation">Development Code</label>
