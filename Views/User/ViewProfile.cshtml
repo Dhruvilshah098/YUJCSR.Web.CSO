@@ -27,6 +27,8 @@
                     <div class="card-header">Account Details</div>
                     <div class="card-body">
                         <form method="post">
+
+                            <a class="btn btn-primary btn-md float-right" href="/User/Profile">Edit</a>
                             @Html.HiddenFor(m => m.CSOID)
 
                             <div class="mb-3">
@@ -96,7 +98,6 @@
                                 @Model.OtherInfo
                             </div>
 
-                            <a class="btn btn-primary btn-sm float-right" href="/User/Profile">Edit</a>
                         </form>
                     </div>
                 </div>
