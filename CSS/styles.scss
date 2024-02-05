@@ -23,13 +23,4 @@
 @import "table.scss";
 @import "ck-editor.scss";
 @import "common.scss";
-
-$allports: #00739f !default;
-
-$colors: () !default;
-$colors: map-merge( ("allports": $allports ), $colors );
-
-$primary: $allports !default;
-
-$theme-colors: () !default;
-$theme-colors: map-merge( ( "primary": $allports ), $theme-colors);
+@import "Onboarding.scss";

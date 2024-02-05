@@ -6,18 +6,19 @@
 	<title>Register - YUJCSR.Web.CSO</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/User/Register.css" />
+	<link href="/css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<section class="wizard-section">
-		<div class="row no-gutters">
-			<div class="col-lg-6 col-md-6">
+		<div class="">
+			@* <div class="col-lg-6 col-md-6">
 				<div class="wizard-content-left d-flex justify-content-center align-items-center">
 					<h1>On-Boarding</h1>
 				</div>
-			</div>
-			<div class="col-lg-6 col-md-6">
+			</div> *@
+			<div class="">
 				<div class="form-wizard">
-					<form action="" method="post" role="form">
+					<form action="" method="post" role="form" class="p-3 shadow-lg p-5">
 						<div class="form-wizard-header">
 							<p>Fill all form field to go next step</p>
 							<ul class="list-unstyled form-wizard-steps clearfix">
@@ -62,7 +63,7 @@
 								<label for="Website" class="wizard-form-text-label">Website (if applicable)</label>
 								@* <div class="wizard-form-error"></div> *@
 							</div>
-							
+
 							<div class="form-group">
 								<input type="text" class="form-control wizard-required" id="FounderName">
 								<label for="FounderName" class="wizard-form-text-label">
@@ -133,37 +134,9 @@
 							</div>
 						</fieldset>
 
-						@* <fieldset class="wizard-fieldset">
-							<div class="form-group">
-								<label for="Aim">United Nations Sustainable Development Goals addressed (please tick on the CSR goals that your projects cater to):</label>
-								
-								<div class="row">
-									<div class="col-6">
-										<input type="checkbox" class="form-control" id="Vision">
-									</div>
-									<div class="col-6">
-										<label for="Vision" class="wizard-form-text-label">Vision</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="Vision">
-								<label for="Vision" class="wizard-form-text-label">Vision</label>
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="Mission">
-								<label for="Mission" class="wizard-form-text-label">Mission</label>
-							</div>
-							
-							<div class="form-group clearfix">
-								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
-								<a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
-							</div>
-						</fieldset> *@
-
 						<fieldset class="wizard-fieldset">
 							<h5>Upload Documents</h5>
-					
+
 							<div class="form-group">
 								<label for="honame">Please upload the Permanent Account Number (PAN) Card . (PDF or Image format)</label>
 								<input type="file" class="form-control wizard-required" id="honame">
@@ -186,7 +159,8 @@
 
 							<div class="form-group">
 								<label for="honame">
-									Please upload the NGO Registration document. (PDF or Image format)*</label>
+									Please upload the NGO Registration document. (PDF or Image format)*
+								</label>
 								<input type="file" class="form-control wizard-required" id="honame">
 								<div class="wizard-form-error"></div>
 							</div>
@@ -244,7 +218,7 @@
 								<input type="text" class="form-control" id="honame">
 								<div class="wizard-form-error"></div>
 							</div>
-							
+
 							<div class="form-group clearfix">
 								<a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
 								<a href="javascript:;" class="form-wizard-submit float-right">Submit</a>
