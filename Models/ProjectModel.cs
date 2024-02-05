@@ -18,7 +18,7 @@
         public string? Location { get; set; }
         public decimal? TotalBudget { get; set; }
         public decimal? DurationInMonths { get; set; }
-        public decimal? expectedOutcome { get; set; }
+        public string? expectedOutcome { get; set; }
         public string? amenities { get; set; }
         public string? experts { get; set; }
         public bool activeStatus { get; set; }

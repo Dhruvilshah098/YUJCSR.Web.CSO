@@ -9,6 +9,7 @@
 	<section>
 		@if (string.IsNullOrEmpty(Model.ProjectID))
 		{
+			<div style="color:red">@ViewBag.Error</div>
 			<h1>Create Project</h1>
 		}
 		else

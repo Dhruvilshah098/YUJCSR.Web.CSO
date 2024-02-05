@@ -184,8 +184,10 @@ namespace YUJCSR.Web.CSO.BusinessManager
 						apiMethod = "Project";
 						dataInputRequest.createdBy = "cso portal";
 						dataInputRequest.activeStatus = true;
+						dataInputRequest.refID = "2325565";//randomid
 
-					}
+
+                    }
 					else
 					{
 						dataInputRequest.activeStatus = true;

@@ -55,7 +55,15 @@ namespace YUJCSR.Web.CSO.Controllers
 
 			var data = manager.CreateOrUpdateProject(dataModel);
 
-			return RedirectToAction("Index");
+			if (data)
+			{
+				return RedirectToAction("Index");
+			}
+			else
+			{
+				ViewBag.Error = "Error occured. Please contact support";
+                return View("Save", dataModel);
+            }
 		}
 
 		[HttpPost]
