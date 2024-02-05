@@ -20,6 +20,7 @@ namespace YUJCSR.Web.CSO.Controllers
         {
             return View();
         }
+        
         [HttpPost]
         public IActionResult Login(LoginModel model)
         {
@@ -73,6 +74,17 @@ namespace YUJCSR.Web.CSO.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        public IActionResult ViewProfile()
+        {
+			CSOProfileModel objCSO = new CSOProfileModel();
+
+			string ccoId = HttpContext.Session.GetString("_CcoId");
+
+			CSOManager manager = new CSOManager(_config);
+			var profileData = manager.GetProfileDetails(ccoId);
+			return View("ViewProfile", profileData);
+		}
 
         public IActionResult Profile()
         {
